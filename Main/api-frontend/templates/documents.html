@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="documents">
+    <h2>Documents</h2>
+    <form method="POST" action="{{ url_for('documents') }}" enctype="multipart/form-data">
+        <div class="form-group">
+            <label for="document">Select Document:</label>
+            <input type="file" class="form-control-file" id="document" name="document" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Upload Document</button>
+    </form>
+</div>
+{% endblock %}

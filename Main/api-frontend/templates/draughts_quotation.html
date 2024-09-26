@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="draughts-quotation">
+    <h2>Draughts Quotation</h2>
+    <form method="POST" action="{{ url_for('draughts_quotation') }}">
+        <!-- Add your form fields here -->
+        <p>Draughts Quotation form goes here.</p>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+{% endblock %}

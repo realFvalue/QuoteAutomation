@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="restoration-work">
+    <h2>Restoration Work</h2>
+    <form method="POST" action="{{ url_for('restoration_work') }}">
+        <!-- Add your form fields here -->
+        <p>Restoration Work form goes here.</p>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+{% endblock %}

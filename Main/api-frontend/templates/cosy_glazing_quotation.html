@@ -1,0 +1,91 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="cosy-glazing-quotation">
+    <h2>Cosy Glazing Quotation</h2>
+    <form method="POST" action="{{ url_for('cosy_glazing_quotation') }}">
+        <table class="table table-bordered" id="quotationTable">
+            <thead>
+                <tr>
+                    <th>Win No</th>
+                    <th>Unit (A,B,C)</th>
+                    <th>L/R T/B</th>
+                    <th>Type SI/SF/CF/CC/FF</th>
+                    <th>Location</th>
+                    <th>W/mm</th>
+                    <th>H/mm</th>
+                    <th>Moisture Reading</th>
+                    <th>Sash Stop</th>
+                    <th>Window Colour</th>
+                    <th>Trim Details</th>
+                    <th>Sq Bead</th>
+                    <th>C-Catch</th>
+                    <th>C-Stay</th>
+                    <th>Normal Stay</th>
+                    <th>Locking Stay Pin</th>
+                    <th>Move Catch</th>
+                    <th>Move Stay</th>
+                    <th>Base Supports</th>
+                    <th>Safety Clips</th>
+                    <th>Cut Out</th>
+                    <th>Cut Angle</th>
+                    <th>Template (Arch)</th>
+                    <th>Very Large Window</th>
+                    <th>Mag Tape Colour</th>
+                    <th>Extra Hours</th>
+                    <th>Notes</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><input type="text" name="winNo[]" class="form-control" required></td>
+                    <td>
+                        <select name="unit[]" class="form-control" required>
+                            <option value="">Select</option>
+                            <option value="A">A</option>
+                            <option value="B">B</option>
+                            <option value="C">C</option>
+                        </select>
+                    </td>
+                    <td><input type="text" name="lrTb[]" class="form-control" required></td>
+                    <td>
+                        <select name="type[]" class="form-control" required>
+                            <option value="">Select</option>
+                            <option value="SI">SI</option>
+                            <option value="SF">SF</option>
+                            <option value="CF">CF</option>
+                            <option value="CC">CC</option>
+                            <option value="FF">FF</option>
+                        </select>
+                    </td>
+                    <td><input type="text" name="location[]" class="form-control" required></td>
+                    <td><input type="number" name="wMm[]" class="form-control" required></td>
+                    <td><input type="number" name="hMm[]" class="form-control" required></td>
+                    <td><input type="text" name="moistureReading[]" class="form-control"></td>
+                    <td><input type="text" name="sashStop[]" class="form-control"></td>
+                    <td><input type="text" name="windowColour[]" class="form-control"></td>
+                    <td><input type="text" name="trimDetails[]" class="form-control"></td>
+                    <td><input type="text" name="sqBead[]" class="form-control"></td>
+                    <td><input type="text" name="cCatch[]" class="form-control"></td>
+                    <td><input type="text" name="cStay[]" class="form-control"></td>
+                    <td><input type="text" name="normalStay[]" class="form-control"></td>
+                    <td><input type="text" name="lockingStayPin[]" class="form-control"></td>
+                    <td><input type="text" name="moveCatch[]" class="form-control"></td>
+                    <td><input type="text" name="moveStay[]" class="form-control"></td>
+                    <td><input type="text" name="baseSupports[]" class="form-control"></td>
+                    <td><input type="text" name="safetyClips[]" class="form-control"></td>
+                    <td><input type="text" name="cutOut[]" class="form-control"></td>
+                    <td><input type="text" name="cutAngle[]" class="form-control"></td>
+                    <td><input type="text" name="templateArch[]" class="form-control"></td>
+                    <td><input type="text" name="veryLargeWindow[]" class="form-control"></td>
+                    <td><input type="text" name="magTapeColour[]" class="form-control"></td>
+                    <td><input type="number" name="extraHours[]" class="form-control"></td>
+                    <td><input type="text" name="notes[]" class="form-control"></td>
+                </tr>
+            </tbody>
+        </table>
+        <button type="button" class="btn btn-secondary" id="addRow">Add Row</button>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+{% endblock %}
