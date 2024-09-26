@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="loft-insulation">
+    <h2>Loft Insulation</h2>
+    <form method="POST" action="{{ url_for('loft_insulation') }}">
+        <!-- Add your form fields here -->
+        <p>Loft Insulation form goes here.</p>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+{% endblock %}

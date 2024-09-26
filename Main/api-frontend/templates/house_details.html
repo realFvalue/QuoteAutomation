@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="house-details">
+    <h2>House Details</h2>
+    <form method="POST" action="{{ url_for('house_details') }}">
+        <!-- Add your form fields here -->
+        <p>House Details form goes here.</p>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+{% endblock %}

@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="job-notes">
+    <h2>Job Notes</h2>
+    <form method="POST" action="{{ url_for('job_notes') }}">
+        <div class="form-group">
+            <label for="job_notes">Enter Job Notes:</label>
+            <textarea class="form-control" id="job_notes" name="job_notes" rows="5" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+{% endblock %}
